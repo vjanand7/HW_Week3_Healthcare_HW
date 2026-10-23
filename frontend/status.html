@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Status Tracking</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="title-bar">Diabetes Patient Management</div>
+
+        <div class="page">
+            <p><a href="search.html">&larr; Back to search</a></p>
+            <h2>Status Tracking</h2>
+
+            <!-- Screen 2: update form -->
+            <section class="card" id="status-form-section">
+                <form id="status-form">
+                    <div class="row">
+                        <div class="field">
+                            <label for="encounter_id">Encounter Id</label>
+                            <input type="text" id="encounter_id" name="encounter_id" readonly>
+                        </div>
+                        <div class="field">
+                            <label for="patient_nbr">Patient Number</label>
+                            <input type="text" id="patient_nbr" name="patient_nbr" readonly>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="field">
+                            <label for="status">Status</label>
+                            <select id="status" name="status">
+                                <option value="PENDING_REVIEW">PENDING_REVIEW</option>
+                                <option value="ASSIGNED">ASSIGNED</option>
+                                <option value="CONTACTED">CONTACTED</option>
+                                <option value="FOLLOW_UP_SCHEDULED">FOLLOW_UP_SCHEDULED</option>
+                                <option value="CLOSED">CLOSED</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="assigned_to">Assigned To</label>
+                            <input type="text" id="assigned_to" name="assigned_to" maxlength="100">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="notes">Notes</label>
+                        <textarea id="notes" name="notes" maxlength="2000"></textarea>
+                    </div>
+
+                    <button type="submit" id="update-button">Update</button>
+                </form>
+            </section>
+
+            <p id="message" class="message"></p>
+
+            <!-- List the update here -->
+            <section class="updates" id="update-list-section">
+                <h3>Updates</h3>
+                <div id="update-list"></div>
+            </section>
+        </div>
+
+        <!-- compiled from src/status.ts (run: npm run build) -->
+        <script type="module" src="dist/status.js"></script>
+    </body>
+</html>

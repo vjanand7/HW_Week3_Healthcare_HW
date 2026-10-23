@@ -1,0 +1,16 @@
+{
+  "name": "hw-week3-healthcare-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Search Patient and Status Tracking screens (TypeScript)",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "serve": "node serve.mjs",
+    "start": "tsc && node serve.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

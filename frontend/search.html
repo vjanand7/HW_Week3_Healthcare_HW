@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Search Patient</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="title-bar">Diabetes Patient Management</div>
+
+        <div class="page">
+            <h2>Search Patient</h2>
+
+            <!-- Screen 1: search form -->
+            <section class="card" id="patient-search-form">
+                <form id="search-form">
+                    <div class="field">
+                        <label for="patient_nbr">Patient Number</label>
+                        <input type="text" id="patient_nbr" name="patient_nbr" maxlength="50">
+                    </div>
+
+                    <div class="field">
+                        <label for="risk_level">Risk Level</label>
+                        <select id="risk_level" name="risk_level">
+                            <option value="">Any</option>
+                            <option value="LOW">LOW</option>
+                            <option value="MEDIUM">MEDIUM</option>
+                            <option value="HIGH">HIGH</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="risk_score">Risk Score</label>
+                        <input type="number" id="risk_score" name="risk_score" min="0" max="100">
+                    </div>
+
+                    <button type="submit" id="search-button">Search &rarr;</button>
+                </form>
+            </section>
+
+            <p id="message" class="message"></p>
+
+            <!-- Results: click an Encounter Id to open screen 2 -->
+            <section class="results" id="patient-search-results">
+                <table id="encounter-table">
+                    <thead>
+                        <tr>
+                            <th data-field="encounter_id">Encounter Id</th>
+                            <th data-field="patient_nbr">Patient Number</th>
+                            <th data-field="age">Age</th>
+                            <th data-field="risk_score">Risk Score</th>
+                            <th data-field="risk_level">Risk Level</th>
+                        </tr>
+                    </thead>
+                    <tbody id="result-list"></tbody>
+                </table>
+            </section>
+        </div>
+
+        <!-- compiled from src/search.ts (run: npm run build) -->
+        <script type="module" src="dist/search.js"></script>
+    </body>
+</html>

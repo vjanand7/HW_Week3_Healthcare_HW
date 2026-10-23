@@ -1,0 +1,101 @@
+/* Shared styles for both screens */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #333333;
+    margin: 0;
+}
+
+/* Blue title bar, like the wireframe */
+.title-bar {
+    background-color: #a5d8ff;
+    border-bottom: 2px solid #74b9f0;
+    padding: 14px 32px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px 32px 60px;
+}
+
+h2 { color: #1971c2; margin-top: 8px; }
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #dde4ee;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.field { margin-bottom: 16px; }
+
+label { display: block; font-weight: bold; margin-bottom: 6px; }
+
+input, select, textarea {
+    width: 260px;
+    padding: 8px;
+    border: 1px solid #c5ced9;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+input[readonly] { background-color: #eef2f7; color: #555555; }
+
+textarea { width: 100%; max-width: 600px; height: 90px; resize: vertical; }
+
+button {
+    background-color: #1971c2;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 24px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover { background-color: #145a9c; }
+button:disabled { background-color: #9db8d2; cursor: not-allowed; }
+
+a { color: #1971c2; }
+
+.message { margin: 14px 0; min-height: 20px; font-size: 14px; }
+.message.error { color: #c92a2a; }
+.message.ok { color: #2b8a3e; }
+
+/* Result and update areas: reserved space even when empty */
+.results { margin-top: 28px; min-height: 200px; }
+
+table { width: 100%; border-collapse: collapse; background-color: #ffffff; }
+
+th, td {
+    border: 1px solid #dddddd;
+    padding: 10px 24px;
+    text-align: center;
+    font-size: 13px;
+}
+
+th { background-color: #1971c2; color: #ffffff; }
+
+.updates { margin-top: 28px; min-height: 160px; }
+
+.update-item {
+    border-left: 4px solid #74b9f0;
+    background-color: #ffffff;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border-radius: 0 4px 4px 0;
+}
+
+.update-item .when { color: #777777; font-size: 12px; }
+.update-item .notes { margin-top: 4px; white-space: pre-wrap; }

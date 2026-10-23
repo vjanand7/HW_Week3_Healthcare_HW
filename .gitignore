@@ -1,0 +1,49 @@
+# Environment variables & secrets (CRITICAL for security)
+.env
+.env.*
+!.env.example
+
+# Credentials, tokens, certificates, and private keys
+credentials*.json
+secrets*.json
+*-service-account*.json
+*.pem
+*.key
+*.crt
+
+# Local database files and dumps
+*.db
+*.sqlite
+*.sqlite3
+*.sql.bak
+
+# Local datasets; do not commit potentially sensitive health data
+data/*.csv
+
+# Python bytecode and caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Local Virtual Environments
+fdevirtualenvironment/
+venv/
+.venv/
+env/
+
+# IDE / Editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS System Files (since you are on a Mac)
+.DS_Store
+
+# Raw data / CSV files are ignored above because they may contain sensitive health data.
+
+# Frontend (TypeScript) build output and packages
+frontend/node_modules/
+frontend/dist/
